@@ -27,7 +27,4 @@ This document details the physical pinout, signal routing, and harness wiring fo
 
 ## 🖼 Harness Schematic Visual
 
-*(Upload your harness diagram image to `docs/harness_diagram.png` to render below)*
-
-![Harness Wiring Diagram](harness_diagram.png)
 <img width="1111" height="737" alt="harness_diagram png" src="https://github.com/user-attachments/assets/76ebb80f-cbeb-46fd-ae80-35eacd12056b" />

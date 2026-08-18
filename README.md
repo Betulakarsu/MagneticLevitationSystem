@@ -56,7 +56,7 @@ The continuous control output is mapped to an 8-bit PWM duty cycle driving the M
 
 ## 📐 System Block Diagram
 
-```text
+
        +------------+        +---------------+        +--------------+
        |  SetPoint  | -----> |  Arduino Uno  | -----> | MOSFET Driver|
        +------------+        |  (PID Loop)   |        |   Circuit    |
@@ -67,10 +67,11 @@ The continuous control output is mapped to an 8-bit PWM duty cycle driving the M
        | Feedback   | <----- | Floating Object|<----- | Electromagnet|
        | Sensor     |        | (Position x)  |        |  (Coil Current)
        +------------+        +---------------+        +--------------+
-
+---
 <img width="751" height="180" alt="simulink_block_diagram png" src="https://github.com/user-attachments/assets/d9daec68-3eff-4acb-a4b4-3b1e2d9ffc5f" />
 
-
+## 📁 Repository Structure
+```text
 MagneticLevitation/
 ├── src/
 │   └── maglev_controller.ino    # Core PID control algorithm source code

@@ -71,12 +71,12 @@ The continuous control output is mapped to an 8-bit PWM duty cycle driving the M
 <img width="751" height="180" alt="simulink_block_diagram png" src="https://github.com/user-attachments/assets/d9daec68-3eff-4acb-a4b4-3b1e2d9ffc5f" />
 
 ## 📁 Repository Structure
+
 ```text
 MagneticLevitation/
+├── docs/
+│   ├── harness_diagram.md       # Wiring harness and electrical connection documentation
+│   └── system_analysis.md      # Mathematical model and system dynamic analysis
 ├── src/
-│   └── maglev_controller.ino    # Core PID control algorithm source code
-├── hardware/
-│   ├── circuit_diagram.png      # Schematic diagram
-│   └── simulation.pdsprj        # Circuit simulation file
-├── .gitignore                   # Version control exclusions
-└── README.md                    # Project documentation
+│   └── MagneticLevitation.ino   # Core Arduino PID control source code
+└── README.md                    # Main project documentation

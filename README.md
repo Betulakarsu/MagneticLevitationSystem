@@ -41,6 +41,18 @@ $$\text{Output}(t) = K_p \cdot e(t) + K_i \int e(t) \, dt + K_d \cdot \frac{de(t
 The continuous control output is mapped to an 8-bit PWM duty cycle driving the MOSFET gate.
 
 ---
+## 🛠 Hardware Architecture
+<img width="1111" height="737" alt="harness_diagram png" src="https://github.com/user-attachments/assets/4ec7d8fd-606c-47c0-976f-406d91089e88" />
+
+| Component | Specification | Description |
+| :--- | :--- | :--- |
+| **Microcontroller** | ATmega328P (Arduino Uno) | Main digital signal processor executing the control loop |
+| **Actuator** | Custom Electromagnet Coil | Inductive element generating variable attractive force |
+| **Sensor Stage** | Hall Effect / IR Receiver Pair | Analog positional feedback tracking the levitation gap |
+| **Power Stage** | N-Channel Logic Level MOSFET | PWM switching transistor (e.g., IRLZ44N / IRF540N) |
+| **Protection** | Fast Recovery Diode | Flyback diode parallel to coil for inductive surge protection |
+| **Power Supply** | External DC Power Source | Dedicated power line for coil current demand |
+
 
 ## 📐 System Block Diagram
 
@@ -55,19 +67,9 @@ The continuous control output is mapped to an 8-bit PWM duty cycle driving the M
        | Feedback   | <----- | Floating Object|<----- | Electromagnet|
        | Sensor     |        | (Position x)  |        |  (Coil Current)
        +------------+        +---------------+        +--------------+
-## 🛠 Hardware Architecture
 
-```text
-+-------------------+--------------------------------+--------------------------------------------------------------+
-| Component         | Specification                  | Description                                                  |
-+-------------------+--------------------------------+--------------------------------------------------------------+
-| Microcontroller   | ATmega328P (Arduino Uno)       | Main digital signal processor executing the control loop     |
-| Actuator          | Custom Electromagnet Coil      | Inductive element generating variable attractive force       |
-| Sensor Stage      | Hall Effect / IR Receiver Pair | Analog positional feedback tracking the levitation gap       |
-| Power Stage       | N-Channel Logic Level MOSFET   | PWM switching transistor (e.g., IRLZ44N / IRF540N)           |
-| Protection        | Fast Recovery Diode            | Flyback diode parallel to coil for inductive surge protection|
-| Power Supply      | External DC Power Source       | Dedicated power line for coil current demand                 |
-+-------------------+--------------------------------+--------------------------------------------------------------+
+<img width="1111" height="737" alt="harness_diagram png" src="https://github.com/user-attachments/assets/58f2f37f-2722-4308-a9d3-8dc0b87e37d6" />
+
 MagneticLevitation/
 ├── src/
 │   └── maglev_controller.ino    # Core PID control algorithm source code

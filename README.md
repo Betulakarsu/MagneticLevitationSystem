@@ -68,7 +68,8 @@ The continuous control output is mapped to an 8-bit PWM duty cycle driving the M
        | Sensor     |        | (Position x)  |        |  (Coil Current)
        +------------+        +---------------+        +--------------+
 
-<img width="1111" height="737" alt="harness_diagram png" src="https://github.com/user-attachments/assets/58f2f37f-2722-4308-a9d3-8dc0b87e37d6" />
+<img width="751" height="180" alt="simulink_block_diagram png" src="https://github.com/user-attachments/assets/d9daec68-3eff-4acb-a4b4-3b1e2d9ffc5f" />
+
 
 MagneticLevitation/
 ├── src/
